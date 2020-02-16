@@ -85,3 +85,19 @@ end
 --    goto label   -- a 小于 3 的时候跳转到标签 label
 --end
 
+
+
+
+
+i = 0
+::s1:: do
+  print(i)
+  i = i+1
+end
+if i>3 then
+  os.exit()   -- i 大于 3 时退出
+end
+goto s1
+
+
+
