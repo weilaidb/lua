@@ -136,3 +136,44 @@ do
    print(i,v)
 end
 
+
+fruits = {"banana","orange","apple","grapes"}
+print("排序前")
+for k,v in ipairs(fruits) do
+   print(k,v)
+end
+
+table.sort(fruits)
+print("排序后")
+for k,v in ipairs(fruits) do
+   print(k,v)
+end
+
+
+
+function table_maxn(t)
+   local mn=nil;
+   for k, v in pairs(t) do
+      if(mn==nil) then
+         mn=v
+      end
+      if mn < v then
+         mn = v
+      end
+   end
+   return mn
+end
+tbl = {[1] = 2, [2] = 6, [3] = 34, [26] =5}
+print("tbl 最大值：", table_maxn(tbl))
+print("tbl 长度 ", #tbl)
+
+
+
+function table_leng(t)
+   local leng=0
+   for k, v in pairs(t) do
+      leng=leng+1
+   end
+   return leng;
+end
+
