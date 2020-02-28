@@ -2,14 +2,14 @@
 
 TARGET        = `basename $(PWD)`
 LIBDIR        = lib
-SRC           = $(shell find src -name '*.c')
-SRC_INC_DIR	 = $(shell find src -type d)
+SRC           = $(shell find source -name '*.c')
+SRC_INC_DIR	 = $(shell find source -type d)
 SRC_INC	 = $(SRC_INC_DIR:%=-I%)
 OBJ           = $(SRC:%.c=%.o)
 LOCAL_LIBS    = -Llib 
 LOCAL_INC     = -Iinclude  $(SRC_INC)
 
-CPPSRC        = $(shell find src -name '*.cpp')
+CPPSRC        = $(shell find source -name '*.cpp')
 CPPOBJ        = $(CPPSRC:%.cpp=%.o)
 LIBTARGET     = 
 
@@ -57,13 +57,9 @@ clean:
 	 
 	
 %.o : %.cpp
-#	@echo " [CXX]	($@)"
-	#@echo "$(CXX) $(CXXFLAGS) $(INCPATH) -c $< -o $@"
 	@$(CXX) $(CXXFLAGS) $(INCPATH) -c $< -o $@
 
 %.o : %.c
-#	@echo " [CC]	($@)"
-	#@echo "$(CC) $(CFLAGS) $(INCPATH)  -c $< -o $@"
 	@$(CXX) $(CFLAGS) $(INCPATH)  -c $< -o $@
 
 
@@ -76,6 +72,6 @@ help:
 	@echo INCPATH: $(INCPATH)
 	@echo OBJ    : $(OBJ)
 	@echo CPPOBJ : $(CPPOBJ)
-	@echo LIBSHAREDTARGET: $(LIBSHAREDTARGET
+	@echo LIBSHAREDTARGET: $(LIBSHAREDTARGET)
 	@echo ============== help end   =====================
 
