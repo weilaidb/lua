@@ -14,6 +14,8 @@ alias grepnri="grep -nri "
 
 alias gitst="git status -u "
 alias gitci="git commit "
+alias gitpl="git pull "
+alias gitciamend="git commit --amend"
 alias gitremote="git remote -v"
 alias gitbr="git branch -a"
 alias gitlog="git log "
