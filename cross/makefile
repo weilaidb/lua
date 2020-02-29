@@ -50,6 +50,8 @@ $(TARGET):$(OBJ) $(CPPOBJ)
 	@$(LINK)  $(LFLAGS) -o $(TARGET)  $(OBJ) $(CPPOBJ)  $(LIBS) 
 	@mkdir -p bin
 	@$(MOVE)	$(TARGET)	bin/
+	@echo ======= exec main =============
+	@./bin/$(TARGET)
 clean:
 	@echo " Cleaning... "
 	@echo rm -f $(OBJ) $(CPPOBJ) $(TARGET)  $(TARGET)

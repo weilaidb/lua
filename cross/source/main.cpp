@@ -27,6 +27,7 @@ static int add_tolua(lua_State* L)
 	//	x =  lua_tonumber(L, -2);
 	//}
  
+
 	int y = luaL_checkint(L, 1);
 	int x = luaL_checkint(L, 2);
 	// end
@@ -48,6 +49,9 @@ int main()
  
 	// 注册函数
 	CLuaWrapper::reg_fun2Lua("add", add_tolua);
+
+	// 注册函数
+	CLuaWrapper::reg_fun2Lua("addx", add_tolua);
  
 	// 执行Lua脚本
 	CLuaWrapper::exe_lua_file("test.lua");
