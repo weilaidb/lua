@@ -10,11 +10,13 @@ fi
 
 # User specific aliases and functions
 
+alias grepnri="grep -nri "
+
 alias gitst="git status -u "
 alias gitci="git commit "
 alias gitremote="git remote -v"
 alias gitbr="git branch -a"
 alias gitlog="git log "
 alias gitlognomergedpatch="git log --no-merged -p"
-alias gitadd="git add -all "
+alias gitadd="git add -A "
 alias gitpushcurbranch="CURBR=`git branch| awk '{print $2}'` && git push origin $CURBR"
