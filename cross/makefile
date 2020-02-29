@@ -7,7 +7,7 @@ SRC_INC_DIR	 = $(shell find source -type d)
 SRC_INC	 = $(SRC_INC_DIR:%=-I%)
 OBJ           = $(SRC:%.c=%.o)
 LOCAL_LIBS    = -Llib 
-LOCAL_INC     = -Iinclude  $(SRC_INC)
+LOCAL_INC     = -Iinclude  -I/usr/local/include/ $(SRC_INC)
 
 CPPSRC        = $(shell find source -name '*.cpp')
 CPPOBJ        = $(CPPSRC:%.cpp=%.o)
@@ -18,7 +18,7 @@ LIBTARGET     =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = #-D_LARGEFILE64_SOURCE
+DEFINES       = -DLUA_COMPAT_APIINTCASTS #-D_LARGEFILE64_SOURCE
 CFLAGS        = -w -fPIC -g -x c -pipe $(EXTRA_OPTS) $(OPT_CFLAGS) -pipe -O2 -g -Wall -W -D_REENTRANT $(DEFINES)
 CXXFLAGS      = -w -fPIC -g -pipe $(EXTRA_OPTS) $(OPT_CFLAGS) -pipe -O2 -g -Wall -W -D_REENTRANT $(DEFINES)
 INCPATH       = $(LOCAL_INC) 

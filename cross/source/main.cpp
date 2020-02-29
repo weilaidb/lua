@@ -27,11 +27,8 @@ static int add_tolua(lua_State* L)
 	//	x =  lua_tonumber(L, -2);
 	//}
  
-//	int y = luaL_checkint(L, 1);
-//	int x = luaL_checkint(L, 2);
-
-	int y = 1;
-	int x = 2;
+	int y = luaL_checkint(L, 1);
+	int x = luaL_checkint(L, 2);
 	// end
  
 	// 调用C函数
