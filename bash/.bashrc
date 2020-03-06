@@ -9,6 +9,7 @@ fi
 # export SYSTEMD_PAGER=
 
 # User specific aliases and functions
+alias killyum='sudo rm -f /var/run/yum.pid'
 
 alias grepnri="grep -nri "
 
