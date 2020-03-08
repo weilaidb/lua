@@ -12,6 +12,7 @@ fi
 alias killyum='sudo rm -f /var/run/yum.pid'
 
 alias grepnri="grep -nri "
+alias explorer="nautilus --new-window "
 
 alias gitst="git status -u "
 alias gitci="git commit "
