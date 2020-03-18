@@ -16,6 +16,7 @@ alias explorer="nautilus --new-window "
 
 alias gitst="git status -u "
 alias gitci="git commit "
+alias gitck="git checkout "
 alias gitpl="git pull "
 alias gitciamend="git commit --amend"
 alias gitremote="git remote -v"
